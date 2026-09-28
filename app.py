@@ -32,139 +32,126 @@ st.markdown(
     }
     .block-container {
         max-width: 760px;
-        padding-top: 0.7rem;
-        padding-bottom: 2rem;
+        padding-top: 0.25rem;
+        padding-bottom: 1.1rem;
     }
     h1, h2, h3, p, div, button {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
     .game-title {
         text-align: center;
-        font-size: clamp(2.2rem, 8vw, 3.4rem);
+        font-size: clamp(2rem, 7vw, 2.7rem);
         font-weight: 900;
-        letter-spacing: 0.03em;
-        margin-bottom: 0.15rem;
+        letter-spacing: 0.05em;
+        margin: 0 0 0.15rem;
         color: #2b2925;
-    }
-    .sub-title {
-        text-align: center;
-        font-size: clamp(1.05rem, 4.3vw, 1.35rem);
-        font-weight: 700;
-        color: #655f57;
-        margin-bottom: 0.9rem;
-    }
-    .panel {
-        background: rgba(255,255,255,0.86);
-        border: 2px solid rgba(87,77,62,0.14);
-        border-radius: 22px;
-        padding: 16px 12px;
-        margin: 10px 0;
-        box-shadow: 0 7px 20px rgba(72,62,48,0.06);
-    }
-    .panel-label {
-        font-size: clamp(1.05rem, 4vw, 1.3rem);
-        color: #5d574f;
-        font-weight: 900;
-        margin-bottom: 10px;
-        text-align: center;
-    }
-    .tiles {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 9px;
-        justify-content: center;
-        align-items: center;
-        min-height: 70px;
-    }
-    .tile {
-        width: clamp(50px, 14vw, 62px);
-        height: clamp(66px, 18vw, 82px);
-        border-radius: 12px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        font-size: clamp(1.8rem, 8vw, 2.5rem);
-        font-weight: 900;
-        border: 3px solid #4c463d;
-        background: #fffdf8;
-        color: #2b2925;
-        box-shadow: 0 5px 0 #c9c0b1;
-        margin: 2px;
-    }
-    .tile.unknown {
-        background: #4d4b47;
-        color: #f7f3ea;
-        border-color: #383632;
-        box-shadow: 0 5px 0 #252421;
-    }
-    .tile.faceup {
-        background: #f2e3bd;
-        border-color: #8c7145;
-        box-shadow: 0 5px 0 #c5aa77;
-    }
-    .tile.hidden {
-        background: repeating-linear-gradient(45deg,#6d655c,#6d655c 6px,#5e574f 6px,#5e574f 12px);
-        color: white;
-        border-color: #49433d;
-        box-shadow: 0 5px 0 #302c28;
+        line-height: 1.05;
     }
     .status {
         text-align: center;
-        border-radius: 18px;
-        padding: 16px 12px;
-        font-size: clamp(1.2rem, 5vw, 1.65rem);
-        line-height: 1.45;
+        border-radius: 14px;
+        padding: 9px 8px;
+        font-size: clamp(1.15rem, 4.8vw, 1.45rem);
+        line-height: 1.25;
         font-weight: 900;
-        margin: 12px 0;
+        margin: 5px 0 7px;
         background: #fff7de;
         border: 2px solid #e6d29e;
         color: #40371f;
     }
-    .score-row {
-        display: flex;
-        justify-content: center;
-        gap: 24px;
-        margin: 10px 0 12px;
-        font-size: clamp(1.05rem, 4.5vw, 1.35rem);
+    .game-section {
+        margin: 5px 0 7px;
+        text-align: center;
+    }
+    .panel-label {
+        font-size: clamp(1.05rem, 4.4vw, 1.3rem);
+        color: #514b43;
         font-weight: 900;
-        color: #4f4942;
+        margin-bottom: 4px;
+        text-align: center;
+        line-height: 1.15;
+    }
+    .tiles {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+        justify-content: center;
+        align-items: center;
+    }
+    .tile {
+        width: clamp(34px, 9.5vw, 44px);
+        height: clamp(46px, 12vw, 56px);
+        border-radius: 9px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: clamp(1.5rem, 6.3vw, 2rem);
+        font-weight: 900;
+        border: 2px solid #4c463d;
+        background: #fffdf8;
+        color: #2b2925;
+        box-shadow: 0 3px 0 #c9c0b1;
+        margin: 1px;
+        box-sizing: border-box;
+    }
+    .tile.unknown {
+        width: clamp(29px, 8vw, 37px);
+        height: clamp(36px, 9.5vw, 44px);
+        font-size: clamp(1.25rem, 5vw, 1.55rem);
+        background: #4d4b47;
+        color: #f7f3ea;
+        border-color: #383632;
+        box-shadow: 0 3px 0 #252421;
+    }
+    .tile.faceup {
+        background: #f2e3bd;
+        border-color: #8c7145;
+        box-shadow: 0 3px 0 #c5aa77;
+    }
+    .hidden-info {
+        text-align: center;
+        margin-top: 3px;
+        font-size: clamp(0.95rem, 3.8vw, 1.08rem);
+        font-weight: 800;
+        color: #6a635b;
     }
     .voice-title {
         text-align: center;
-        font-size: clamp(1.25rem, 5vw, 1.6rem);
+        font-size: clamp(1.08rem, 4.5vw, 1.3rem);
         font-weight: 900;
-        margin: 12px 0 6px;
+        margin: 7px 0 2px;
         color: #2b2925;
     }
     .voice-result {
         text-align: center;
-        font-size: clamp(1.2rem, 5vw, 1.55rem);
+        font-size: clamp(1.05rem, 4.4vw, 1.25rem);
         font-weight: 900;
-        padding: 10px;
-        margin: 8px 0;
-        border-radius: 14px;
+        padding: 7px;
+        margin: 5px 0;
+        border-radius: 12px;
         background: #eef7e9;
         color: #294622;
     }
     .voice-error {
         text-align: center;
-        font-size: clamp(1rem, 4.3vw, 1.25rem);
+        font-size: clamp(1rem, 4.2vw, 1.18rem);
         font-weight: 800;
-        padding: 10px;
-        margin: 8px 0;
-        border-radius: 14px;
+        padding: 7px;
+        margin: 5px 0;
+        border-radius: 12px;
         background: #fff0ec;
         color: #71382d;
     }
     .choose-title {
         text-align: center;
-        font-size: clamp(1.2rem, 5vw, 1.55rem);
+        font-size: clamp(1.15rem, 4.8vw, 1.4rem);
         font-weight: 900;
-        margin: 14px 0 8px;
+        margin: 7px 0 4px;
+        color: #2b2925;
     }
     .log-item {
-        padding: 10px 11px;
-        margin: 6px 0;
+        padding: 9px 10px;
+        margin: 5px 0;
         background: #f8f5ef;
         border-radius: 10px;
         font-size: 1rem;
@@ -172,40 +159,45 @@ st.markdown(
     }
     .winner {
         text-align: center;
-        font-size: clamp(1.8rem, 8vw, 2.7rem);
+        font-size: clamp(1.7rem, 7vw, 2.3rem);
         font-weight: 900;
-        padding: 22px 14px;
-        border-radius: 20px;
+        padding: 14px 10px;
+        border-radius: 16px;
         background: #fff2be;
         border: 2px solid #e0bd55;
         color: #4a3c12;
-        margin: 12px 0;
+        margin: 7px 0;
     }
     div[data-testid="stButton"] button {
-        border-radius: 16px;
-        min-height: 64px;
-        font-size: clamp(1.25rem, 5vw, 1.7rem);
+        border-radius: 14px;
+        min-height: 58px;
+        font-size: clamp(1.55rem, 6vw, 2rem);
         font-weight: 900;
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
     }
     div[data-testid="stButton"] button[kind="primary"] {
         background: #292724;
         border-color: #292724;
     }
-    /* streamlit-mic-recorder のボタンを子ども向けに大きくする */
     iframe[title="streamlit_mic_recorder.streamlit_mic_recorder"] {
-        min-height: 76px !important;
+        min-height: 68px !important;
     }
     .small-note {
         color: #6e675f;
-        font-size: 0.95rem;
+        font-size: 0.82rem;
         text-align: center;
-        margin-top: 10px;
+        margin-top: 6px;
         font-weight: 700;
     }
     @media (max-width: 520px) {
-        .block-container { padding-left: 0.65rem; padding-right: 0.65rem; }
-        .panel { padding-left: 8px; padding-right: 8px; }
-        .tiles { gap: 6px; }
+        .block-container {
+            padding-left: 0.45rem;
+            padding-right: 0.45rem;
+        }
+        .tiles { gap: 3px; }
+        div[data-testid="stVerticalBlock"] { gap: 0.25rem; }
+        div[data-testid="stHorizontalBlock"] { gap: 0.35rem; }
     }
     </style>
     """,
@@ -301,12 +293,12 @@ def check_winner():
     if len(st.session_state.user_hand) == 0:
         st.session_state.game_over = True
         st.session_state.winner = "user"
-        add_log("あなたの手札が0枚になりました。あなたの勝ちです。")
+        add_log("じぶんのカードが0まい。あなたのかちです。")
         return True
     if len(st.session_state.cpu_hand) == 0:
         st.session_state.game_over = True
         st.session_state.winner = "cpu"
-        add_log("CPUの手札が0枚になりました。CPUの勝ちです。")
+        add_log("あいてのカードが0まい。あいてのかちです。")
         return True
     return False
 
@@ -318,12 +310,12 @@ def user_guess(number):
     if remove_one(st.session_state.user_hand, number):
         st.session_state.face_up.append(number)
         st.session_state.face_up.sort()
-        add_log(f"あなた：『{number}』 → 正解。続けてあなたの番です。")
+        add_log(f"あなた：『{number}』 → あたり。つづけてあなたのばんです。")
         st.session_state.user_failed_numbers.discard(number)
         check_winner()
         return
 
-    add_log(f"あなた：『{number}』 → ありません。CPUの番です。")
+    add_log(f"あなた：『{number}』 → なし。あいてのばんです。")
     st.session_state.user_failed_numbers.add(number)
     st.session_state.turn = "cpu"
     st.session_state.turn_no += 1
@@ -387,13 +379,13 @@ def cpu_play_until_miss():
         if remove_one(st.session_state.cpu_hand, guess):
             st.session_state.face_up.append(guess)
             st.session_state.face_up.sort()
-            add_log(f"CPU：『{guess}』 → 正解。CPUは続けて推理します。")
+            add_log(f"あいて：『{guess}』 → あたり。つづけます。")
             st.session_state.cpu_failed_numbers.discard(guess)
             if check_winner():
                 return
             continue
 
-        add_log(f"CPU：『{guess}』 → ありません。あなたの番です。")
+        add_log(f"あいて：『{guess}』 → なし。あなたのばんです。")
         st.session_state.cpu_failed_numbers.add(guess)
         st.session_state.turn = "user"
         st.session_state.turn_no += 1
@@ -411,72 +403,72 @@ if st.session_state.turn == "cpu" and not st.session_state.game_over:
     cpu_play_until_miss()
 
 # -----------------------------
-# Header
+# Header / board / controls
 # -----------------------------
-st.markdown('<div class="game-title">DOMEMO BATTLE</div>', unsafe_allow_html=True)
-st.markdown(
-    '<div class="sub-title">みえている すうじから、じぶんの すうじを あてよう</div>',
-    unsafe_allow_html=True,
-)
+st.markdown('<div class="game-title">DOMEMO</div>', unsafe_allow_html=True)
 
-# CPU area
-st.markdown('<div class="panel">', unsafe_allow_html=True)
-st.markdown(
-    f'<div class="panel-label">CPUの手札　残り {len(st.session_state.cpu_hand)} 枚</div>',
-    unsafe_allow_html=True,
-)
-st.markdown(tiles_html(st.session_state.cpu_hand), unsafe_allow_html=True)
-st.markdown('</div>', unsafe_allow_html=True)
-
-# Center board
-st.markdown('<div class="panel">', unsafe_allow_html=True)
-st.markdown(
-    f'<div class="panel-label">場に見えているタイル　{len(st.session_state.face_up)} 枚</div>',
-    unsafe_allow_html=True,
-)
-st.markdown(tiles_html(st.session_state.face_up, "faceup"), unsafe_allow_html=True)
-st.markdown(
-    f'<div class="panel-label" style="margin-top:14px;">伏せ札　{len(st.session_state.hidden)} 枚</div>',
-    unsafe_allow_html=True,
-)
-st.markdown(
-    tiles_html([None] * len(st.session_state.hidden), "hidden"),
-    unsafe_allow_html=True,
-)
-st.markdown('</div>', unsafe_allow_html=True)
-
-# Player area
-st.markdown('<div class="panel">', unsafe_allow_html=True)
-st.markdown(
-    f'<div class="panel-label">あなたの手札　残り {len(st.session_state.user_hand)} 枚</div>',
-    unsafe_allow_html=True,
-)
-st.markdown(
-    tiles_html([None] * len(st.session_state.user_hand), "unknown"),
-    unsafe_allow_html=True,
-)
-st.markdown('</div>', unsafe_allow_html=True)
-
-# Status
+# いちばん大事な「だれのばんか」を最上部に置く。
 if st.session_state.game_over:
-    result = "あなたの勝ち" if st.session_state.winner == "user" else "CPUの勝ち"
+    result = "あなたの かち！" if st.session_state.winner == "user" else "あいての かち"
     st.markdown(f'<div class="winner">{result}</div>', unsafe_allow_html=True)
 else:
-    status = "あなたのばん！ 1〜7から えらんでね" if st.session_state.turn == "user" else "CPUが かんがえています"
+    status = "あなたのばん！" if st.session_state.turn == "user" else "あいてが かんがえています"
     st.markdown(f'<div class="status">{status}</div>', unsafe_allow_html=True)
 
+# 相手のカード。HTMLを1回で描画し、余分な白い帯を作らない。
 st.markdown(
-    f'<div class="score-row"><span>あなた {len(st.session_state.user_hand)}枚</span><span>CPU {len(st.session_state.cpu_hand)}枚</span></div>',
+    '<div class="game-section">'
+    f'<div class="panel-label">あいてのカード　あと {len(st.session_state.cpu_hand)}まい</div>'
+    f'{tiles_html(st.session_state.cpu_hand)}'
+    '</div>',
+    unsafe_allow_html=True,
+)
+
+# 推理に必要な公開カードは数字を省略しない。カード自体だけコンパクトにする。
+st.markdown(
+    '<div class="game-section">'
+    f'<div class="panel-label">みえているカード　{len(st.session_state.face_up)}まい</div>'
+    f'{tiles_html(st.session_state.face_up, "faceup")}'
+    f'<div class="hidden-info">みえないカード　{len(st.session_state.hidden)}まい</div>'
+    '</div>',
+    unsafe_allow_html=True,
+)
+
+# 自分の数字は見せず、残り枚数だけを小さな「？」で示す。
+st.markdown(
+    '<div class="game-section">'
+    f'<div class="panel-label">じぶんのカード　あと {len(st.session_state.user_hand)}まい</div>'
+    f'{tiles_html([None] * len(st.session_state.user_hand), "unknown")}'
+    '</div>',
     unsafe_allow_html=True,
 )
 
 # User controls
 if not st.session_state.game_over and st.session_state.turn == "user":
-    st.markdown('<div class="voice-title">🎤 こえで こたえる</div>', unsafe_allow_html=True)
+    st.markdown('<div class="choose-title">どの すうじ？</div>', unsafe_allow_html=True)
+
+    # スマホでも押しやすいように4個 + 3個の2段にする。
+    top_cols = st.columns(4)
+    for idx, number in enumerate(range(1, 5)):
+        with top_cols[idx]:
+            if st.button(str(number), key=f"guess_{number}", use_container_width=True, type="primary"):
+                st.session_state.voice_feedback = None
+                user_guess(number)
+                st.rerun()
+
+    bottom_cols = st.columns(3)
+    for idx, number in enumerate(range(5, 8)):
+        with bottom_cols[idx]:
+            if st.button(str(number), key=f"guess_{number}", use_container_width=True, type="primary"):
+                st.session_state.voice_feedback = None
+                user_guess(number)
+                st.rerun()
+
+    st.markdown('<div class="voice-title">こえでも こたえられるよ</div>', unsafe_allow_html=True)
     spoken_text = speech_to_text(
         language="ja-JP",
-        start_prompt="🎤 おして はなす",
-        stop_prompt="⏹️ おわり",
+        start_prompt="🎤 はなす",
+        stop_prompt="■ おわり",
         just_once=True,
         use_container_width=True,
         key="domemo_voice",
@@ -498,25 +490,6 @@ if not st.session_state.game_over and st.session_state.turn == "user":
             unsafe_allow_html=True,
         )
 
-    st.markdown('<div class="choose-title">👇 または すうじを おす</div>', unsafe_allow_html=True)
-
-    # スマホでも押しやすいように4個 + 3個の2段にする。
-    top_cols = st.columns(4)
-    for idx, number in enumerate(range(1, 5)):
-        with top_cols[idx]:
-            if st.button(str(number), key=f"guess_{number}", use_container_width=True, type="primary"):
-                st.session_state.voice_feedback = None
-                user_guess(number)
-                st.rerun()
-
-    bottom_cols = st.columns(3)
-    for idx, number in enumerate(range(5, 8)):
-        with bottom_cols[idx]:
-            if st.button(str(number), key=f"guess_{number}", use_container_width=True, type="primary"):
-                st.session_state.voice_feedback = None
-                user_guess(number)
-                st.rerun()
-
 # History
 with st.expander("対戦履歴を見る", expanded=False):
     for item in st.session_state.log:
@@ -532,24 +505,24 @@ with col_b:
     with st.popover("遊び方"):
         st.markdown(
             """
-            **目的**  
-            自分には見えない手札の数字を当て、先に手札を0枚にします。
+            **もくひょう**  
+            じぶんには見えないカードの数字をあてて、先に0まいにします。
 
             **このMVPの2人用セット**  
             - 1は1枚、2は2枚、…7は7枚、合計28枚
-            - あなた：7枚
-            - CPU：7枚
-            - 表向きの場札：7枚
-            - 伏せ札：7枚
+            - あなた：7まい
+            - あいて：7まい
+            - みえているカード：7まい
+            - みえないカード：7まい
 
-            **手番**  
-            1〜7から、自分の手札にあると思う数字を1つ選びます。  
-            当たればその数字を1枚公開して手札から減らし、続けて宣言できます。  
-            外れたときに手番がCPUへ移ります。
+            **じゅんばん**  
+            1〜7から、じぶんのカードにあると思う数字を1つえらびます。  
+            あたったら、その数字が1まいへって、つづけてこたえられます。  
+            はずれたら、あいてのばんです。
             """
         )
 
 st.markdown(
-    '<div class="small-note">MVP：ユーザー1人 vs CPU1人。CPUは見えているタイル数から推理します。</div>',
+    '<div class="small-note">1人 vs あいて。あいても、みえている数字から考えます。</div>',
     unsafe_allow_html=True,
 )
